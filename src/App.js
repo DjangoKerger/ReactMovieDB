@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Components
-import Header from './components/Header/Header';
+import Header from './components/Header/Index';
 
 //Styles
 import { GlobalStyle } from './GlobalStyle';
@@ -9,9 +9,9 @@ import { GlobalStyle } from './GlobalStyle';
 const App = () => {
     return (
 
-        <div>
+        <div className='App'>
             <Header />
-            Start here!
+            Start Here!
             <GlobalStyle />
         </div>
     )
