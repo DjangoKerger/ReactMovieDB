@@ -10,13 +10,13 @@ import { Wrapper, Content, LogoImg, TMDBLogoImg } from './Header.styles'
 
 
 const Header = () => {
-  return 
+  return (
   <Wrapper>
     <Content>
         <LogoImg src={RMDBLogo} alt="rmdb-logo"/>
         <TMDBLogoImg src={TMDBLogo} alt="tmdb-logo"/> 
     </Content>
-  </Wrapper>;
+  </Wrapper>);
 };
 
 export default Header;
