@@ -2,6 +2,7 @@ import React from 'react';
 
 //Components
 import Header from './components/Header/Index';
+import Home from './components/Home';
 
 //Styles
 import { GlobalStyle } from './GlobalStyle';
@@ -11,7 +12,7 @@ const App = () => {
 
         <div className='App'>
             <Header />
-            Start Here!
+            <Home />
             <GlobalStyle />
         </div>
     )
