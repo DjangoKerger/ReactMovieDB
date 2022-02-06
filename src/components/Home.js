@@ -23,8 +23,8 @@ const Home = () => {
      //6. function that fetches movies imported from API
     const fetchMovies = async (page, searchTerm = "") => {
         try {
-            setError(false)  //grabbing new data so we want to make sure theres no error initially
-            setLoading(true) //will be waiting for data so we want to show that it is loading.
+            setError(false);  //grabbing new data so we want to make sure theres no error initially
+            setLoading(true); //will be waiting for data so we want to show that it is loading.
 
             const movies = await API.fetchMovies(searchTerm, page);
             //7. useing spread operator to spread out the previous movies
@@ -40,8 +40,10 @@ const Home = () => {
     };
     //initial render
     useEffect(()=> {
-        fetchMovies(1) //calls page 1 from movie API
-    }, []) //depency array for use effect, want it to run once hence the empty array
+        fetchMovies(1); //calls page 1 from movie API
+    }, []); //depency array for use effect, want it to run once hence the empty array
+
+    console.log(state)
 
 
   return (
