@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 //config, 4. this comes from the config file for when we are interacting witht he API
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL} from '../config';
 // Components
+import HeroImage from './HeroImage';
 
 //Hook
 import {useHomeFetch} from '../hooks/useHomeFetch'
@@ -20,9 +21,20 @@ const Home = () => {
 
 
   return (
-    <div>
-        Home Page
-    </div>);
+
+        //importing heroimage, check to see if theres anything in the array, if yes return HeroImage if no it will return false.
+        <>
+        {state.results[0] &&
+        <HeroImage 
+            //prop on heroImage, this calls for the image from the API origional is in the config file.
+            image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
+            title={state.results[0].original_title}
+            text={state.results[0].overview}
+        />
+        }
+
+        </>
+    )
 };
 
 export default Home;
