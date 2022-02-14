@@ -2,13 +2,14 @@
 //2. this component will have state so import the useState hook from react
 
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 //config, 4. this comes from the config file for when we are interacting witht he API
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL} from '../config';
 // Components
 import HeroImage from './HeroImage';
 import Grid from './Grid';
 import Thumb from './Thumb';
+import Spinner from './Spinner';
 
 //Hook
 import {useHomeFetch} from '../hooks/useHomeFetch'
@@ -47,7 +48,7 @@ const Home = () => {
                     />
             ))}
         </Grid>
-
+        <Spinner />               
         </>
     )
 };
