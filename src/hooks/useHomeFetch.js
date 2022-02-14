@@ -11,9 +11,12 @@ const initialState = {
 }
 
 export const useHomeFetch = () => {
+    const [searchTerm, setSearchTerm] = useState('')
     const [state, setState] = useState(initialState)
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+
+    console.log(searchTerm)
 
      //6. function that fetches movies imported from API
     const fetchMovies = async (page, searchTerm = "") => {
@@ -37,5 +40,5 @@ export const useHomeFetch = () => {
     useEffect(()=> {
         fetchMovies(1); //calls page 1 from movie API
     }, []); //depency array for use effect, want it to run once hence the empty array
-    return { state: state, loading, error };
+    return { state: state, loading, error, setSearchTerm };
 }
