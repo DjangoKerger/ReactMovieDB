@@ -9,9 +9,9 @@ const SearchBar = ({ setSearchTerm }) => {
     const initial = useRef(true);
 
 
-    useEffect(()=> {
+    useEffect(() => {
         if (initial.current){
-            initial.current(false);
+            initial.current = false;
             return;
         }
 
